@@ -1,0 +1,19 @@
+{
+    "compilerOptions": {
+      "baseUrl": "./src"
+    },
+    "include": ["src", "tests/*"],
+    "bail": 1,
+    "verbose": true
+}
+  
+  
+"cypress-cucumber-preprocessor": {
+  "nonGlobalStepDefinitions": false,
+  "cucumberJson": {
+    "generate": true,
+    "outputFolder": "cypress/cucumber-json",
+    "filePrefix": "",
+    "fileSuffix": ".cucumber"
+  }
+}

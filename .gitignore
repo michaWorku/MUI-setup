@@ -11,6 +11,12 @@
 # production
 /build
 
+/allure-report
+/allure-results
+
+/jsonlogs
+/reports
+
 # misc
 .DS_Store
 .env.local
