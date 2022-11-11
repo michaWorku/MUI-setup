@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -18,7 +18,13 @@
     "resolveJsonModule": true,
     "isolatedModules": true,
     "noEmit": true,
-    "jsx": "react-jsx"
+    "jsx": "react-jsx",
+    "types": ["cypress", "@testing-library/cypress", "@shelex/cypress-allure-plugin"],
+    "baseUrl": "./",
+    // "baseUrl": "src",
+    // "paths": {
+    //   "test-utils": ["./utils/test-utils"]
+    // }
   },
   "include": [
     "src"
