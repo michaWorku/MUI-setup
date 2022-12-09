@@ -6,7 +6,7 @@ export type AuthType = {
   refreshToken?: string
 } | null
 
-type AuthContextType = {
+export type AuthContextType = {
   auth: AuthType,
   setAuth: Dispatch<SetStateAction<AuthType>>
 }
