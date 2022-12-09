@@ -1,22 +1,22 @@
-import React, { createContext, FC, useContext, useState } from "react"
+import React, { createContext, Dispatch, FC, SetStateAction, useContext, useState } from "react"
 
 export type AuthType = {
   token?: any,
-  access_token?: string,
-  refresh_token?: string
+  accessToken?: string,
+  refreshToken?: string
 } | null
 
 type AuthContextType = {
   auth: AuthType,
-  setAuth: (auth: AuthType) => void
+  setAuth: Dispatch<SetStateAction<AuthType>>
 }
 
-const AuthContext= createContext<AuthContextType | {}>({})
+const AuthContext= createContext<AuthContextType| null>(null)
 AuthContext.displayName = 'AuthContext'
 
 const AuthProvider = ({children}:{children: React.ReactNode})=>{
 
-  const [auth, setAuth] = useState<AuthType | {}>({});
+  const [auth, setAuth] = useState<AuthType | null>(null);
 
     return (
         <AuthContext.Provider value={{auth, setAuth}}>
