@@ -1,0 +1,600 @@
+{
+  "auth": {
+    "firstName": "mikiasss",
+    "middleName": "workuuuu",
+    "lastName": "wondifraw",
+    "email": "micha@blog.com",
+    "phoneNumber": "0945566509",
+    "password": "1234567890",
+    "passwordConfirm": "1234567890",
+    "terms": true,
+    "access_token": "eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJ0ZXN0Iiwic3ViIjoiOWM4ZWIxMzQtM2I4OS00MzIzLTllNDUtOTliMDljNzg3M2M1IiwiZXhwIjoxNjcwNTkyMzkxLCJuYmYiOjE2NzA1OTE3OTF9.DxbowauLZuz__ZfQL8eCSxRkGYMiC14Zj4_lzCSBYB8xD18qJ1TiiraXbRNFyfHRqK9bvFfDEXqt4hPfxjUtbBfb1pcHSjKjOFW4M4Yl3RLqrgJ202VpMHrw6M-C_9TsbapDdUDbuC8i8KooMVN3cy6Tf9pV3wsMuScuWql4XQ05eUjwFyMPOjbXXRxwL3d-ug9JRsxGzT6IWIba4zHTa0-OZDvA8teXlQXl5abGvshJVntRwaJpPOTlTjPcWOGs98A4-iKhF6ZUN7YY5LoGp44IWLr7eAGRd_3gWuIJNiJvP9yMeIcVsDOt3UmIr_HqX61zj6ttd2jsTTiig-vHUQ",
+    "expires_in": "600s",
+    "id_token": "eyJhbGciOiJQUzUxMiIsInR5cCI6IkpXVCJ9.eyJmaXJzdF9uYW1lIjoiWm9saW5hIiwibWlkZGxlX25hbWUiOiJBYmVyYSIsImxhc3RfbmFtZSI6IlJlZ2Fzc2EiLCJwaWN0dXJlIjoiIiwiZW1haWwiOiJhZG1pbkBnbWFpbC5jb20iLCJwaG9uZSI6IjI1MTkyODAyMzM4NiIsImF6cCI6IiIsInN1YiI6IjljOGViMTM0LTNiODktNDMyMy05ZTQ1LTk5YjA5Yzc4NzNjNSIsImF1ZCI6WyJzc28iXSwiZXhwIjoxNjcwNjc4MTkxLCJpYXQiOjE2NzA1OTE3OTF9.GiiB908NI0pPd1OmF0Aj6TNQ4-vMkIs-YQ3XKcQN9r1R6SXjVatgHewBecwREJPjgNrq4O1PRqqkvR0wGpoR5BvvrVLzQbb3fBW_2oGka-c27jNvIolM1vEHo0XHgiq_Jc-We3Q-DD3ewsZGFF2-lt6i1I53oDK4pFijWYZ-eDMau9IXHNBu11h8aWK0fL7jX6AKEoyVriHBIe8WelN_CVwyIUm3v-qNun0WZ_pqorJGLgIxOFjGQ312c65XPFRj0TJQhUxQaizBDRCm9zD7CuR5XCUR1S5c7GdzOxKA82taJfH69NeaMqz1jP9JJBl24JNdxtijNuolmZNKthfHDA",
+    "refresh_token": "JjQyjJDuJysxD0WtjrmZG5LU5",
+    "token_type": "Bearer"
+  },
+  "permissions": [
+    "create_role",
+    "update_client",
+    "get_all_clients",
+    "get_all_roles",
+    "delete_scope",
+    "update_client_status",
+    "update_user_status",
+    "get_all_permissions",
+    "get_client",
+    "get_all_users",
+    "update_role",
+    "get_all_resource_servers",
+    "get_all_scopes",
+    "get_all_identity_providers",
+    "create_identity_provider"
+  ],
+  "role": {
+    "name": "manage all"
+  },
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "permission": [
+    {
+      "name": "manage all",
+      "status": "ACTIVE",
+      "description": "view the family porgram detail and corporate program detail",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:view-detail"
+      },
+      "id": "0230798e-0a78-436a-a239-263f707e1648",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "view program detail",
+      "status": "ACTIVE",
+      "description": "view the family porgram detail and corporate program detail",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:view-detail"
+      },
+      "id": "0230798e-0a78-436a-a239-263f707e1642",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "update role status",
+      "status": "ACTIVE",
+      "description": "updates role status",
+      "statement": {
+        "action": "PATCH",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:role:update-role-status"
+      },
+      "id": "08b7a267-e829-4609-867c-ab20ca364568",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "list company-users",
+      "status": "ACTIVE",
+      "description": "list company-users",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:company:list-company-users"
+      },
+      "id": "1036b1bd-290e-4df6-bdec-707bcbe0f765",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "user program state",
+      "status": "ACTIVE",
+      "description": "get user program states",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:state"
+      },
+      "id": "15fcd94c-b6d9-443f-a892-36c67e66fa8f",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get all permissions",
+      "status": "ACTIVE",
+      "description": "returns all permissions within the tenant the user is in",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:permissions:list"
+      },
+      "id": "19ac50b0-30fd-4dab-a609-7c63034f394d",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "list company",
+      "status": "ACTIVE",
+      "description": "list company",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:company:list-company"
+      },
+      "id": "23587ccd-0b03-4f3b-88ed-dd03c225cb81",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "generate vocher code",
+      "status": "ACTIVE",
+      "description": "generate voucher code for program users",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:voucher"
+      },
+      "id": "327f68f3-bcf7-42bc-9b9a-81b65a3279f2",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "update permission status",
+      "status": "ACTIVE",
+      "description": "updates permission status",
+      "statement": {
+        "action": "PATCH",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:permission:update-permission-status"
+      },
+      "id": "3501aafa-ecbb-4c02-92cf-5a246a9e30b8",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "create role",
+      "status": "ACTIVE",
+      "description": "creates a new role with the permissions of the users preference",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:roles:post"
+      },
+      "id": "38939309-d1b5-40ec-a7e8-b861d2387cf0",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "list programs",
+      "status": "ACTIVE",
+      "description": "get the list of corporate programs and family package programs",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:list"
+      },
+      "id": "42b4dc7d-7426-4719-90e7-4fa2dae324e0",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "pay",
+      "status": "ACTIVE",
+      "description": " pay to a driver",
+      "statement": {
+        "action": "PUT",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:payment:${username}"
+      },
+      "id": "490685ac-5480-4521-9d27-11974b9a16f3",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "manage-all",
+      "status": "ACTIVE",
+      "description": "super admin can perform any action on any domain",
+      "statement": {
+        "action": "*",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "*"
+      },
+      "id": "4a036e79-0108-449b-92d2-a5a885105dc1",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get users by phone",
+      "status": "ACTIVE",
+      "description": "It is used to search multiple users using their phone numbers.",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:get-users-by-phone"
+      },
+      "id": "4cdbaddd-60ef-432c-9504-4684f9392294",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "register company",
+      "status": "ACTIVE",
+      "description": "register company",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:company:register-company"
+      },
+      "id": "4d92e9a4-6580-4d69-8a2a-b2c8569a8df4",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "add user to company",
+      "status": "ACTIVE",
+      "description": "add user to company",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:company:add-user-to-company"
+      },
+      "id": "59fed1d0-dc65-430d-adf4-029b73c515f9",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "set pin",
+      "status": "ACTIVE",
+      "description": "set pin",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:set-pin"
+      },
+      "id": "5a029a92-3650-4b50-be72-3031dbe33aeb",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get role detail",
+      "status": "ACTIVE",
+      "description": "get role detail",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:role:get-role-detail"
+      },
+      "id": "5e8ad46d-fd1c-435a-b26a-42eb7d78bd92",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "revoke role",
+      "status": "ACTIVE",
+      "description": "revoke user role",
+      "statement": {
+        "action": "PATCH",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:user:revoke-role"
+      },
+      "id": "6900837d-d9a8-4208-ad2a-4396b74396e7",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "update user's role status",
+      "status": "ACTIVE",
+      "description": "update user's role status",
+      "statement": {
+        "action": "PATCH",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:update-role-status"
+      },
+      "id": "6c78ef0c-7c37-4db7-85d1-af1b7f4862e1",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "list program users",
+      "status": "ACTIVE",
+      "description": "get the list of corporate programs and family package programs",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:users:list"
+      },
+      "id": "6dd511ef-4172-4ea6-bd51-312418768eaf",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "create program",
+      "status": "ACTIVE",
+      "description": "Create program for family package or corporate members",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:create"
+      },
+      "id": "8a5d3d61-02e7-4cbe-8f7b-68d57e1bbe2e",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "assign role",
+      "status": "ACTIVE",
+      "description": "assign role to a user",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:roles:assign"
+      },
+      "id": "9341902e-39f5-4daf-803e-5448ac06cce3",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "delete permission",
+      "status": "ACTIVE",
+      "description": "delete permission",
+      "statement": {
+        "action": "DELETE",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:permission:delete-permission"
+      },
+      "id": "953ec188-6209-4d72-a4bd-a487de2737b5",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get user permissions within tenant",
+      "status": "ACTIVE",
+      "description": "it's used to get the user permissions within the tenant",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:user:get-user-permission-under-tenant"
+      },
+      "id": "95795894-2723-4ba9-ad2e-50a1f8490c75",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get all roles",
+      "status": "ACTIVE",
+      "description": "returns all the roles that are available",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:roles:list"
+      },
+      "id": "9d06cda5-871f-4f38-96c4-dd13c3d9eb9d",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "assign program to users",
+      "status": "ACTIVE",
+      "description": "assign family package program and corporate program to users",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:assign-program"
+      },
+      "id": "afc8aaff-a21a-4be9-85c4-9c6996683aed",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "delete role",
+      "status": "ACTIVE",
+      "description": "delete role",
+      "statement": {
+        "action": "DELETE",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:role:delete-role"
+      },
+      "id": "b84ab457-880e-40bd-ad16-38fc6018a605",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "create payment intent",
+      "status": "ACTIVE",
+      "description": "create a payment intent with a pending status",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:payment-intent"
+      },
+      "id": "bc0e41ae-4b7e-484f-8924-81550294d333",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "update program",
+      "status": "ACTIVE",
+      "description": "update program for family package or corporate members",
+      "statement": {
+        "action": "PATCH",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "rideplus:programs:update"
+      },
+      "id": "c306c82d-3cd7-4937-9c5f-121f03347175",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "create permission",
+      "status": "ACTIVE",
+      "description": "registeres a new permission",
+      "statement": {
+        "action": "POST",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:permissions:register"
+      },
+      "id": "cb0d1def-9e36-4c67-ab2f-b283fe2014aa",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "update role",
+      "status": "ACTIVE",
+      "description": "update role's permission",
+      "statement": {
+        "action": "PUT",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:roles:update"
+      },
+      "id": "e0ecb592-c157-40ac-be7b-109b60b48f1a",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get permission detail",
+      "status": "ACTIVE",
+      "description": "get permission detail",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:permissions:get-permissions-detail"
+      },
+      "id": "e9c009be-f58a-473a-923b-617f751ed0b2",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    },
+    {
+      "name": "get user by phone",
+      "status": "ACTIVE",
+      "description": "It is used to search a user using his/her phone number.",
+      "statement": {
+        "action": "GET",
+        "effect": "allow",
+        "fields": [
+          "*"
+        ],
+        "resource": "ride-plus:users:get-user-by-phone"
+      },
+      "id": "ed37f7c2-7a19-49bb-819b-6c3bf70eff04",
+      "delete_or_update": false,
+      "inherited_permissions": []
+    }
+  ]
+}

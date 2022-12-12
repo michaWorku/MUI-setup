@@ -1,5 +1,3 @@
-
-
 import { mount } from 'cypress/react'
 
 import App from '../AppTest';

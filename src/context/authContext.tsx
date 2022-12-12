@@ -3,7 +3,9 @@ import React, { createContext, Dispatch, FC, SetStateAction, useContext, useStat
 export type AuthType = {
   token?: any,
   accessToken?: string,
-  refreshToken?: string
+  refreshToken?: string,
+  roles?: any,
+  permissions?: {}[]
 } | null
 
 export type AuthContextType = {
@@ -11,12 +13,20 @@ export type AuthContextType = {
   setAuth: Dispatch<SetStateAction<AuthType>>
 }
 
+const defaultValue ={
+  token: "",
+  accessToken: "",
+  refreshToken: "",
+  roles: {},
+  permissions: [{}]
+}
+
 const AuthContext= createContext<AuthContextType| null>(null)
 AuthContext.displayName = 'AuthContext'
 
 const AuthProvider = ({children}:{children: React.ReactNode})=>{
 
-  const [auth, setAuth] = useState<AuthType | null>(null);
+  const [auth, setAuth] = useState<AuthType | null>(defaultValue);
 
     return (
         <AuthContext.Provider value={{auth, setAuth}}>
@@ -37,4 +47,11 @@ const isAuthenticated = (authData : AuthType) => {
     return authData !== null && authData !== undefined
 }
 
-export {AuthProvider, useAuth, isAuthenticated}
+const isAuthorized = (authData : AuthType, permissions: string[]) => {
+  return permissions?.every((permission: any) =>{
+    return authData?.permissions?.map((permissions: any)=> permissions?.id).includes(permission)
+})
+}
+
+
+export {AuthProvider, useAuth, isAuthenticated, isAuthorized}
