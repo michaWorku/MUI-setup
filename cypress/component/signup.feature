@@ -17,7 +17,7 @@ Feature: Registration
             | testuser1  | testuser1   | testuser1 | 0925252525   | test1@gmail.com | 12345678  | 12345678 |
     @fail
     Scenario: Failed Registration
-        Given I am in registration pagee
+        Given I am in registration page
         When I registered with the following detailss
             | firstName   | middleName   | lastName   | phoneNumber   | email          | password   | passwordConfirm   | 
             |             |              |            |               |                |            |                   |
